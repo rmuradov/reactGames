@@ -6,7 +6,7 @@ body {
 
 #root {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 img {
@@ -18,14 +18,22 @@ img {
     margin-bottom: 50px;
 }
 
-.count {
-    opacity: 0;
+.image-counter {
+    display: inline-block;
     position: relative;
-    top: 2em;
+}
+
+.image-counter .count {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    font-size: 2rem;
+    transform: translateY(-50%);
     transition: all .2s;
 }
 
-.container:hover .count {
+.image-counter:hover .count {
     opacity: 1;
-    top: 0;
+    left: 110%;
 }
